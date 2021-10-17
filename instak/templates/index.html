@@ -1,10 +1,87 @@
+{%extends 'base.html'%}
 {%load static%}
 {{block.supper}}
 {%block content%}
 
 
    <div  class="container ">
-     <h1>Home works</h1>
-    </div>
+     <img src="static/img/svg/in.svg" alt="">
+     <div class="row">
+       <div class="col-md-7 contain">
+         <img  id="insta" class="img" src="instak/static/img/insta.jpeg" alt="">
+       </div>
+       <div class="col-md-5 ">
+         <div class="contain">
 
+
+         <div class="login">
+           <form class="form-group" action="" method="post">
+             <h1>Instagram</h1>
+
+               <div class="bt">
+                 <a href="/accounts/login/"><button  class="btn btn-info sm" type="button" name="button">Log in</button></a>
+
+               </div>
+               <br>
+
+             <h6 class="animated fadeIn">OR</h6>
+             <p style="text-align:center"><a class="facebook" href="{}"><i class='fab fa-facebook'></i> Login in With Facebook</a></p>
+             <img src="" alt="">
+             <br><br><br><br>
+           </form>
+
+         </div>
+
+         <div class="open">
+           <ul class="list-group">
+             <li class="list-group-item">Dont have an account? <a href="/accounts/register/">Sign up here</a></li>
+
+           </ul>
+
+         </div>
+
+
+
+
+       </div>
+<br><br><br>
+       </div>
+
+     </div>
+     <br><br><br>
+     <div class="row">
+       <div class="col-md-1"></div>
+       <div class="col-md-9">
+         <!-- Footer -->
+            <footer class="bottom">
+              <ul>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">SUPPORT</a></li>
+                <li><a href="">PRESS</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">JOBS</a></li>
+                <li><a href="">PRIVACY</a></li>
+                <li><a href="">LANGUAGE</a></li>
+                <li><a href="">PROFILES</a></li>
+                  <a class="muted"> © Instagram 2021</a>
+              </ul>
+
+
+              <!-- Copyright -->
+
+
+
+              <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+
+       </div>
+       <div class="col-md-1"></div>
+
+
+
+     </div>
+
+   </div>
 {%endblock%}
