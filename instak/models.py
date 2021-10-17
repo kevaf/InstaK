@@ -47,4 +47,22 @@ class Image(models.Model):
 
     class Meta:
         ordering=['image']
-        
+
+
+class Comments(models.Model):
+    comment=models.TextField(max_length=50)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    images=models.IntegerField()
+
+
+    def update_comment(self):
+        self.save()
+
+class Followers(models.Model):
+    user=models.CharField(max_length=30)
+    insta=models.CharField(default='',max_length=30)
+    user_id=models.IntegerField()
+
+
+    def save_followers(self):
+        self.save()
