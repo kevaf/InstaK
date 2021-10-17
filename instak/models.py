@@ -11,8 +11,8 @@ class Profile(models.Model):
     def __str__(self):
         return self.bio
 
-    class Meta:
-        ordering=['pic']
+    # class Meta:
+    #     ordering=['pic']
 
     def save_profile(self):
         self.save()

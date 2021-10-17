@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'instak.apps.NewsConfig',
+    'instak.apps.InstakConfig',
     'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
