@@ -1,0 +1,30 @@
+<nav id="nav" class="navbar sticky-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <div class="col-md-4">
+        <a  id="icons" class=" navbar-brand" href="{%url 'stories'%}"><i class="fab fa-instagram"></i> <i style="border-left:1px solid rgba(0,0,0,0.4);"> </i> <i class="space"></i>  Instagram </a>
+        <a id="navUser" class="ite" href="{%url 'profile'%}"><i class="far fa-user"></i></a>
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form  action="{%url 'search'%}" role="search" class="form-inline  my-2 my-lg-0">
+            <input id="searchUp" class="form-control mr-sm-2" name="user" type="search" placeholder="Search" aria-label="Search">
+          </form>
+  
+        </div>
+  
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="item" ><i class="far fa-heart"></i></a>
+          <a class="item" href="{%url 'profile'%}"><i class="far fa-user"></i></a>
+  
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  
+  
+  
+  </nav>
