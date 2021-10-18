@@ -24,3 +24,6 @@ This is the a clone of the famous Instagram Web application developed all from s
 3. Heroku - Deployment
 4. HTML
 5. CSS/Bootstrap
+
+## Author & Contact Information.
+This web app was created by Kevin Kipyegon. If you have any suggestions or improvements you can reach the author via mail at kevin.kipyegon@student.moringaschool.com.
