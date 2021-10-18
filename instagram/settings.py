@@ -28,18 +28,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#login redirect
+
+LOGIN_REDIRECT_URL='/stories'
+REGISTER_REDIRECT_URL='/stories'
+
 
 # Application definition
 
 INSTALLED_APPS = [
     'instak.apps.InstakConfig',
-    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
     
   
 ]
@@ -140,7 +145,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
 
-LOGOUT_URL = 'login'
-LOGOUT_REDIRECT_URL = 'login'
-LOGIN_URL = 'home'
-LOGIN_REDIRECT_URL = 'home'

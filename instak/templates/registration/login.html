@@ -15,32 +15,38 @@
          <div class="contain">
 
 
-         <div class="login">
-           <form class="form-group" action="/accounts/login/" method="post">
-             <h1>Instagram</h1>
-             {%csrf_token%}
-             {%bootstrap_form form%}
-
-
-               <div class="bt">
-                 <button  class="btn btn-info sm" type="submit" name="button">Log in</button>
-
-               </div>
-               <br>
-
-             <h6 class="animated fadeIn">OR</h6>
-            <p style="text-align:center"><a class="facebook" href="{%url 'stories'%}"><i class='fab fa-facebook'></i> Login in With Facebook</a></p>
-           </form>
-
-         </div>
-
-         <div class="open">
-           <ul class="list-group">
-             <li class="list-group-item">Dont have an account? <a href="/accounts/register/">Sign up here</a></li>
-
-           </ul>
-
-         </div>
+          <div class="login">
+            <form class="form-group" action="/accounts/login/" method="post">
+              <h1>Instagram</h1>
+              {%csrf_token%}
+              {%bootstrap_form form%}
+ 
+ 
+                <div class="bt">
+                  <button  class="btn btn-info sm" type="submit" name="button">Log in</button>
+ 
+                </div>
+                <br>
+ 
+              <h6 class="animated fadeIn">OR</h6>
+             <p style="text-align:center"><a class="facebook" href="{%url 'stories'%}"><i class='fab fa-facebook'></i> Login in With Facebook</a></p>
+            </form>
+ 
+          </div>
+ 
+          <div class="open">
+            <ul class="list-group">
+              <li class="list-group-item">Dont have an account? <a href="/accounts/register/">Sign up here</a></li>
+ 
+            </ul>
+ 
+          </div>
+ 
+ 
+ 
+ 
+        </div>
+ 
 
 
 

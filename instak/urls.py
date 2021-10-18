@@ -13,8 +13,7 @@ urlpatterns=[
     url(r'stories/comment/(\d+)/$',views.comments,name='comment'),
     url(r'profile/user/(\d+)/$',views.other_users,name='users'),
     url(r"^search/",views.search,name="search"),
-    url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
 
-if settings.DEBUG:
-    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+    

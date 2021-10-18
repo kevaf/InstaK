@@ -11,7 +11,7 @@ def index(request):
     title='Home'
     return render(request,"index.html",{"title":title})
 
-# @login_required(login_url="/accounts/login/")
+@login_required(login_url="/accounts/login/")
 def stories(request):
     try:
         current_user=request.user.id
@@ -27,7 +27,7 @@ def stories(request):
 
     return render(request,'feeds.html',{"images":images,"profile":profile,"users":users,"comments":comments})
 
-# @login_required(login_url="/accounts/login/")
+@login_required(login_url="/accounts/login/")
 def profile(request):
     try:
         current_user=request.user.id
@@ -40,7 +40,7 @@ def profile(request):
 
     return render(request,"profile.html",{'profile':profile_photos,"pic":profile})
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def uploads(request):
     title='Upload'
     current_user=request.user
