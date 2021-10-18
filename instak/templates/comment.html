@@ -1,0 +1,189 @@
+{%extends 'base.html'%}
+{%load bootstrap4%}
+{%load static%}
+{{block.supper}}
+{%block content%}
+<nav id="nav" class="navbar sticky-top navbar-expand-lg navbar-light">
+  <div class="container">
+    <div class="col-md-4">
+      <a  id="icons" class=" navbar-brand" href="{%url 'stories'%}"><i class="fab fa-instagram"></i> <i style="border-left:1px solid rgba(0,0,0,0.4);"> </i> <i class="space"></i>  Instagram </a>
+      <a id="navUser" class="ite" href="{%url 'profile'%}"><i class="far fa-user"></i></a>
+
+    </div>
+    <div class="col-md-4">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form  action="{%url 'search'%}" role="search" class="form-inline  my-2 my-lg-0">
+          <input id="searchUp" class="form-control mr-sm-2" name="user" type="search" placeholder="Search" aria-label="Search">
+        </form>
+
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="itens" ><i class="far fa-compass"></i></a>
+        <a class="iten" ><i class="far fa-heart"></i></a>
+        <a class="ite" href="{%url 'profile'%}"><i class="far fa-user"></i></a>
+
+      <!-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="far fa-user"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul> -->
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+</nav>
+<br>
+
+
+   <div  class="container ">
+      <span id="react-root"><svg width="50" height="50" viewBox="0 0 50 50" style="position:absolute;top:50%;left:50%;margin:-25px 0 0 -25px;fill:#c7c7c7"><path d="M25 1c-6.52 0-7.34.03-9.9.14-2.55.12-4.3.53-5.82 1.12a11.76 11.76 0 0 0-4.25 2.77 11.76 11.76 0 0 0-2.77 4.25c-.6 1.52-1 3.27-1.12 5.82C1.03 17.66 1 18.48 1 25c0 6.5.03 7.33.14 9.88.12 2.56.53 4.3 1.12 5.83a11.76 11.76 0 0 0 2.77 4.25 11.76 11.76 0 0 0 4.25 2.77c1.52.59 3.27 1 5.82 1.11 2.56.12 3.38.14 9.9.14 6.5 0 7.33-.02 9.88-.14 2.56-.12 4.3-.52 5.83-1.11a11.76 11.76 0 0 0 4.25-2.77 11.76 11.76 0 0 0 2.77-4.25c.59-1.53 1-3.27 1.11-5.83.12-2.55.14-3.37.14-9.89 0-6.51-.02-7.33-.14-9.89-.12-2.55-.52-4.3-1.11-5.82a11.76 11.76 0 0 0-2.77-4.25 11.76 11.76 0 0 0-4.25-2.77c-1.53-.6-3.27-1-5.83-1.12A170.2 170.2 0 0 0 25 1zm0 4.32c6.4 0 7.16.03 9.69.14 2.34.11 3.6.5 4.45.83 1.12.43 1.92.95 2.76 1.8a7.43 7.43 0 0 1 1.8 2.75c.32.85.72 2.12.82 4.46.12 2.53.14 3.29.14 9.7 0 6.4-.02 7.16-.14 9.69-.1 2.34-.5 3.6-.82 4.45a7.43 7.43 0 0 1-1.8 2.76 7.43 7.43 0 0 1-2.76 1.8c-.84.32-2.11.72-4.45.82-2.53.12-3.3.14-9.7.14-6.4 0-7.16-.02-9.7-.14-2.33-.1-3.6-.5-4.45-.82a7.43 7.43 0 0 1-2.76-1.8 7.43 7.43 0 0 1-1.8-2.76c-.32-.84-.71-2.11-.82-4.45a166.5 166.5 0 0 1-.14-9.7c0-6.4.03-7.16.14-9.7.11-2.33.5-3.6.83-4.45a7.43 7.43 0 0 1 1.8-2.76 7.43 7.43 0 0 1 2.75-1.8c.85-.32 2.12-.71 4.46-.82 2.53-.11 3.29-.14 9.7-.14zm0 7.35a12.32 12.32 0 1 0 0 24.64 12.32 12.32 0 0 0 0-24.64zM25 33a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm15.68-20.8a2.88 2.88 0 1 0-5.76 0 2.88 2.88 0 0 0 5.76 0z"/></svg></span>
+
+     <div class="row">
+       <div class="col-md-1">
+
+       </div>
+       <div class="col-md-7 contain">
+         <div class="">
+           <!-- content here-->
+           {%for image in images%}
+           <div id="card" class="card">
+             <div class="card-header">
+
+              <img class="rounded-circle" height="30px" width="auto" src="/static/img/baby.jpg" alt="">
+
+               <span>{{image.user}}</span><span style="float:right" class="cap"> {{image.caption}}</span>
+             </div>
+             <div class="card-">
+               <div class="">
+                 <img class="img-fluid" src="{{image.image.url}}" alt="">
+               </div>
+
+             </div>
+             <div class="card-footer">
+               <form class="" action="/stories/comment/{{image.id}}/" method="post">
+                 {%csrf_token%}
+                 {%bootstrap_form forms%}
+
+                 <input type="hidden" name="like" value="1">
+                 <button class="lik btn btn" type="submit" name="button"><i   class="far  fa-heart"></i></button>
+                 {{image.likes}} likes
+               </form>
+             </div>
+
+
+           </div>
+           <form class="form-group" action="/stories/comment/{{image.id}}/" name='{{image.id}}' method="post">
+             {%csrf_token%}
+             {%bootstrap_form form%}
+             <input type="hidden" name="id" value="{{ image.id }}">
+             <div class="bttn">
+               <button id='post' class="btn btn-info"  type="submit" name="button">Post</button>
+             </div>
+
+           </form>
+           {%endfor%}
+
+         </div>
+
+
+
+       </div>
+       <div class="col-md-4 ">
+         <div class="contain">
+          <a class="goUser" href="{%url 'profile'%}">
+            {%for img in profile%}
+            <img id="goUser" class="img-fluid rounded-circle" src="{{img.pic.url}}" alt="{{user}}">
+            {%endfor%}
+           {{user}}</a>
+
+         <div id="logi">
+
+             <h1>Comments</h1>
+             {%if comments%}
+             {%for all in comments%}
+             <span id="span"><strong>{{all.user}}...</strong></span><span class="font"> {{all.comment}}  </span><br><br>
+             {%endfor%}
+             {%else%}
+              <div class="alert">
+                <p class="alert alert-info animated fadeIn">No comments yet <br>Be the 1st to add a comment</p>
+              </div>
+             {%endif%}
+               <br>
+
+
+
+         </div>
+
+         <div class="open">
+           <ul class="list-group">
+             <li class="list-group-item">Want to go back home? <a href="{%url 'stories'%}">Home</a></li>
+
+           </ul>
+
+         </div>
+
+
+
+
+       </div>
+
+
+
+
+
+       </div>
+
+     </div>
+     <br><br><br>
+     <div class="row">
+       <div class="col-md-1"></div>
+       <div class="col-md-9">
+         <!-- Footer -->
+            <footer class="bottom">
+              <ul>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">SUPPORT</a></li>
+                <li><a href="">PRESS</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">JOBS</a></li>
+                <li><a href="">PRIVACY</a></li>
+                <li><a href="">LANGUAGE</a></li>
+                <li><a href="">PROFILES</a></li>
+                  <a class="muted"> © Instagram 2021</a>
+              </ul>
+
+
+              <!-- Copyright -->
+
+
+
+              <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+
+       </div>
+       <div class="col-md-1"></div>
+
+
+
+     </div>
+
+   </div>
+{%endblock%}
