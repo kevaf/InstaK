@@ -4,7 +4,7 @@ from django import forms
 class PostImage(forms.ModelForm):
     class Meta:
         model=Image
-        exclude=['likes','comments','date','user','userId','profile']
+        exclude=['likes','comments','date','user','userId','profile', 'name']
 class EditProfile(forms.ModelForm):
     class Meta:
         model=Profile
