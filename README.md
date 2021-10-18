@@ -17,3 +17,10 @@ This is the a clone of the famous Instagram Web application developed all from s
 9. run python3.6 manage.py runserver
 10. The application should work
 11. for the test run python manage.py test instagram
+
+## Technologies Used
+1. Python
+2. Flask
+3. Heroku - Deployment
+4. HTML
+5. CSS/Bootstrap
