@@ -2,9 +2,18 @@ from django.conf.urls import url
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.generic import RedirectView
 
 urlpatterns=[
-    url(r"^$", views.index,name="home")
+    url(r"^$", views.index,name="home"),
+    url(r"stories/$",views.stories,name="stories"),
+    url(r"profile/$",views.profile,name="profile"),
+    url(r'profile/upload$',views.uploads,name='uploads'),
+    url(r'profile/edit$',views.edit,name='edit'),
+    url(r'stories/comment/(\d+)/$',views.comments,name='comment'),
+    url(r'profile/user/(\d+)/$',views.other_users,name='users'),
+    url(r"^search/",views.search,name="search"),
+    url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
 
 if settings.DEBUG:

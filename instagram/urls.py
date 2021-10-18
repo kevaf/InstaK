@@ -16,14 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url,include
 from django.contrib.auth import views
-from django.urls import include, path
+from django.conf.urls import include
 from instak import urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r"^", include("instak.urls")),
-    url(r'^accounts/',include('registration.backends.simple.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
     # path('accounts/', include('registration.backends.default.urls')),
     url(r'^logout/$', views.LogoutView.as_view(),{"next_page": '/'}),
 ]

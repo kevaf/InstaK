@@ -57,7 +57,7 @@ def uploads(request):
     else:
         form=PostImage()
     return render(request,"upload.html",{"title":title,"form":form})
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def edit(request):
     current_user_id=request.user.id
     profile=Profile.objects.filter(userId=current_user_id)
@@ -89,7 +89,7 @@ def edit(request):
             form=EditProfile()
 
             return render(request,"edit.html",{"form":form})
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def comments(request,image_id):
     try:
         image=Image.objects.filter(id=image_id).all()
