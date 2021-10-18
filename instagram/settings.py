@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import dj_database_url
 from decouple import config, Csv
 
@@ -70,6 +73,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'cloudinary',
     
   
 ]
@@ -104,6 +108,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'instagram.wsgi.application'
+
+# adding config
+cloudinary.config( 
+  cloud_name = "dd7uc18cv", 
+  api_key = "873442519164977", 
+  api_secret = "Ft0emETmNDKXXil-RmGEZHcQgbo" 
+)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
