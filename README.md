@@ -32,3 +32,6 @@ This web app was created by Kevin Kipyegon. If you have any suggestions or impro
 ![Login](instak/static/img/IGlogin.png)
 ![Profile](instak/static/img/IGprof.png)
 ![Stories](instak/static/img/IGstories.png)
+
+## Liscence.
+This is an open source project avaiable under the [MIT Liscence](LISCENCE).
