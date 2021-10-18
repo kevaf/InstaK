@@ -83,14 +83,16 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instagram',
-        'USER':'moringa',
-        'PASSWORD':'kev2214',
+        'NAME': 'instagram1',
+        'USER': 'moringa',
+        'PASSWORD': 'kev2214',
     }
 }
+
 
 
 # Password validation
@@ -143,5 +145,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+# ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
 
