@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL='/stories'
 REGISTER_REDIRECT_URL='/stories'
+LOGOUT_REDIRECT_URL = '/accounts/login/?next=/stories/'
 
 
 # Application definition
